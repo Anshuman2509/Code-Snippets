@@ -1,0 +1,13 @@
+C
+gcc a.c(This will create a file a.exe)
+./a.exe(in windows)
+./a.out(in linux)
+gcc a.c -o m.exe(will create m.exe file)
+
+
+C++
+g++ a.c
+./a.exe
+g++ a.cpp -std=c++11
+g++ a.cpp a1.cpp
+g++ -c a.cpp a1.cpp(will create .o files, the code is jargon in this case meant for hiding from end users)

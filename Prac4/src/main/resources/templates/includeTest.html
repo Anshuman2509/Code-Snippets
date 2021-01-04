@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<p>Good Morning <span th:text="${name}"></span></p>
+	<div th:include="sample::fragment1"></div>
+	<div th:include="sample::fragment2(${name},${age})"></div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<p>Welcome <span th:text="${name}"></span></p>
+	<ul>
+	 <li th:each="c,status:${cars}">
+	  <span th:text="${status.index}+' '+${c}"></span>
+	 </li>
+	</ul>
+</body>
+</html>

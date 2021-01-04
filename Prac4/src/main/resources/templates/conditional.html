@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p>The value is isActive model attribute is 
+<span th:style="${isActive}?'color:green':'color:red'" th:text="${isActive}?'active':'inactive'"></span></p>
+<p th:if="${gender}=='M'">Male</p>
+<p th:if="${gender}=='F'">Female</p>
+<p th:unless="${gender}=='F'">Male</p>
+<p th:unless="${gender}=='M'">Female</p>
+<div th:switch="${#lists.size(myList)}">
+<p th:case="'0'">List contains zero elements</p>
+<p th:case="'1'">List contains one element</p>
+<p th:case="*">List contains more than one element</p>
+</div>
+</body>
+</html>
