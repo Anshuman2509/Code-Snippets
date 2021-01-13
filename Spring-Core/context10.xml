@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="aa" class="com.bmw.propertySourcesConfigurer.Employee">
+	 <property name="id" value="${aa.id}"></property>
+	 <property name="name" value="${aa.name}"></property>
+	 <property name="department" value="${aa.department}"></property>
+	</bean>
+	
+	<bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+	<property name="location" value="classpath:employee10.properties"></property>
+	</bean>
+	
+</beans>

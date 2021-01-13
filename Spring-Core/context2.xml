@@ -1,0 +1,42 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="aa" class="com.bmw.collections.Car">
+		<property name="id" value="51"></property>
+		<property name="name" value="Audi"></property>
+	</bean>
+
+	<bean id="bb" class="com.bmw.collections.Car">
+		<property name="id" value="52"></property>
+		<property name="name" value="BMW"></property>
+	</bean>
+
+	<bean id="cc" class="com.bmw.collections.Person">
+		<property name="id" value="22"></property>
+		<property name="name" value="Ethan Hunt"></property>
+		<property name="cars">
+			<list>
+				<ref bean="aa" />
+				<ref bean="bb" />
+			</list>
+		</property>
+		<property name="languages">
+		 <set>
+		  <value>Java</value>
+		  <value>React</value>
+		  <value>Spring Boot</value>
+		 </set>
+		</property>
+		<property name="locations">
+		<map>
+		 <entry key="10" value="London"></entry>
+		 <entry key="11" value="Los Angeles"></entry>
+		</map>
+		</property>
+	</bean>
+
+</beans>

@@ -1,0 +1,33 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="aa" class="com.bmw.autowire.Address">
+	 	<property name="city" value="Pune"></property>
+	 	<property name="state" value="Maharastra"></property>
+	</bean>
+	
+	<bean id="department" class="com.bmw.autowire.Department">
+	  <property name="id" value="81"></property>
+	  <property name="name" value="Electrical"></property>
+	</bean>
+	
+	<bean id="cc" class="com.bmw.autowire.Student" autowire="byName">
+	  <property name="id" value="1001"></property>
+	  <property name="name" value="Ethan Hunt"></property>
+	  <property name="address" ref="aa"></property>
+	</bean>
+	
+	<bean id="dd" class="com.bmw.autowire.Student" autowire="byType">
+	 <property name="id" value="1002"></property>
+	 <property name="name" value="Pater Parker"></property>
+	</bean>
+	
+	<bean id="ee" class="com.bmw.autowire.Student" autowire="constructor">
+	  <constructor-arg index="0" type="int" value="1003"></constructor-arg>
+	  <constructor-arg index="1" type="String" value="Jackie Rhodes"></constructor-arg>
+	</bean>
+</beans>

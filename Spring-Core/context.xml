@@ -1,0 +1,57 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="audi" class="com.bmw.core.Employee">
+    <property name="id" value="1001"></property>
+    <property name="name" value="Jack Ryan"></property>
+    <property name="department" value="Mechanical"></property>
+   </bean>
+   
+   <alias name="audi" alias="audi-alias"/>
+   
+   <bean id="bmw" class="com.bmw.core.Employee">
+    <property name="id" value="1002"></property>
+    <property name="name" value="Ethan Hunt"></property>
+    <property name="department" value="Electrical"></property>
+   </bean>
+   
+   <bean id="merc" class="com.bmw.core.Employee">
+    <constructor-arg index="0" type="int" value="1003"></constructor-arg>
+    <constructor-arg index="1" type="String" value="Peter Parker"></constructor-arg>
+    <constructor-arg index="2" type="String" value="Electrical"></constructor-arg>
+   </bean>
+   
+   <bean id="aa" class="com.bmw.core.Address">
+    <property name="city" value="Paradeep"></property>
+    <property name="state" value="Odisha"></property>
+   </bean>
+   
+   <bean id="bb" class="com.bmw.core.Address">
+    <property name="city" value="Pune"></property>
+    <property name="state" value="Maharastra"></property>
+   </bean>
+   
+   <bean id="cc" class="com.bmw.core.Student">
+    <property name="id" value="45"></property>
+    <property name="name" value="Jeremy Irons"></property>
+    <property name="permanent" ref="aa"></property>
+    <property name="current" ref="bb"></property>
+   </bean>
+   
+   <bean id="dd" class="com.bmw.core.Student">
+    <property name="id" value="66"></property>
+    <property name="name" value="Bruce Wayne"></property>
+    <property name="permanent" ref="aa"/>
+    <property name="current">
+      <bean class="com.bmw.core.Address">
+       <property name="city" value="Cuttack"></property>
+       <property name="state" value="Odisha"></property>
+      </bean>
+    </property>
+   </bean>
+
+</beans>
