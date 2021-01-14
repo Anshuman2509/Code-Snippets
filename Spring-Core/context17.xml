@@ -18,6 +18,8 @@
 	</bean>
 	
 	<bean id="asp" class="com.bmw.aop1.MyAspect"/>
+	<!--For enabling AOP annotation enable the below tag  -->
+	<!-- <aop:aspectj-autoproxy/ -->
 	
 	<aop:config>
 	 <aop:aspect ref="asp">
