@@ -1,0 +1,32 @@
+*{
+	padding:0;
+	margin:0;
+	font-family:Arial;
+	line-height:1.5em;
+}
+.container{
+	width:70%;
+	margin: 25px auto 2px;
+}
+.container table{
+	width:100%;
+}
+.container table td{
+	width:33.3%;
+}
+.container label{
+	text-align: right;
+}
+.container input[type='text']{
+	width:98%;
+	margin:auto;
+}
+.container input[type='submit']{
+	padding:5px 30px;
+	background-color:brown;
+	color:white;
+	border-radius:5px;
+}
+.err{
+	color:red;
+}
