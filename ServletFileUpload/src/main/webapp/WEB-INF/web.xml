@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<servlet>
+		<servlet-name>kia</servlet-name>
+		<servlet-class>com.audi.UploadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>kia</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ford</servlet-name>
+		<servlet-class>com.audi.UploadFormServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>ford</servlet-name>
+	<url-pattern>/upload-form</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
